@@ -65,31 +65,49 @@ $(()=>{
         const $clientContainers = $('.tm-accordion-badge');
         let $currentLogo = '', $currentBadge = '';
 
-        $clientContainers.each(function () {
-            const $clientContainer = $(this);
-            const $triggers = $clientContainer.find('span');
-            const $logos = $clientContainer.find('.tm-clients-logo img');
-            const $badge = $clientContainer.find('.tm-badge-arrow');
+        $clientContainers.hover(
+            function() {
+                //$(this).find('.tm-clients-logo img').css('height','0%')
+                //$(this).find('.tm-clients-logo').css('height','0%!imoprtant');
+                $(this).find('.tm-clients-logo img').removeClass( "uk-hidden" );
+                // $(this).find('.tm-clients-logo').animate({
+                //     height: '100%'
+                // }, 800);
+                // $(this).find('.tm-clients-logo img').animate({
+                //     height: '100%'
+                // },800);
+                $(this).find('.tm-badge-arrow').addClass('tm-open');
+            }, function() {
+                $(this).find('.tm-clients-logo img').addClass( "uk-hidden" );
+                $(this).find('.tm-badge-arrow').removeClass('tm-open');
+            }
+        );
 
-            $triggers.hover(
-                function() {
-                    $($logos[$(this).index()]).removeClass( "uk-hidden" );
-                    $badge.addClass('tm-open');
-                }, function() {
-                    $($logos[$(this).index()]).addClass( "uk-hidden" );
-                    $badge.removeClass('tm-open');
-                }
-            );
-
-            $triggers.click(function () {
-                if($currentLogo.length) $currentLogo.addClass( "uk-hidden" );
-                if($currentBadge.length) $currentBadge.removeClass('tm-open');
-                $currentLogo = $($logos[$(this).index()]);
-                $currentBadge = $badge;
-                $currentLogo.removeClass( "uk-hidden" );
-                $currentBadge.addClass('tm-open');
-            });
-        });
+        // $clientContainers.each(function () {
+        //     const $clientContainer = $(this);
+        //     const $triggers = $clientContainer.find('span');
+        //     const $logos = $clientContainer.find('.tm-clients-logo img');
+        //     const $badge = $clientContainer.find('.tm-badge-arrow');
+        //
+        //     $triggers.hover(
+        //         function() {
+        //             $($logos[$(this).index()]).removeClass( "uk-hidden" );
+        //             $badge.addClass('tm-open');
+        //         }, function() {
+        //             $($logos[$(this).index()]).addClass( "uk-hidden" );
+        //             $badge.removeClass('tm-open');
+        //         }
+        //     );
+        //
+        //     $triggers.click(function () {
+        //         if($currentLogo.length) $currentLogo.addClass( "uk-hidden" );
+        //         if($currentBadge.length) $currentBadge.removeClass('tm-open');
+        //         $currentLogo = $($logos[$(this).index()]);
+        //         $currentBadge = $badge;
+        //         $currentLogo.removeClass( "uk-hidden" );
+        //         $currentBadge.addClass('tm-open');
+        //     });
+        // });
 
     })();
 });

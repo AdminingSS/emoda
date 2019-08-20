@@ -381,7 +381,7 @@ input {
 
 .tm-slider-top .slick-slide .tm-slider-top-image {
   opacity: 0;
-  transition: opacity 1s ease,transform 3s ease;
+  transition: opacity 1s ease, transform 3s ease;
   transform: translateX(1000px);
 }
 
@@ -414,6 +414,7 @@ input {
   right: 0;
   bottom: 0;
   left: 50%;
+  //transition: all 1s;
 
   img {
     //max-width: 100%;
@@ -626,6 +627,8 @@ input {
 
   cursor: pointer;
 
+  transition: height 1s;
+
   //&:hover, &:focus {
   //
   //  .tm-clients-logo {
@@ -640,7 +643,8 @@ input {
 
 .tm-clients-logo {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -748,6 +752,15 @@ input {
   height: 100%;
   box-sizing: border-box;
 
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s ease;
+
+  &.awaiting-animation {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
   p {
     line-height: 40px;
     letter-spacing: 0.016em;
@@ -844,6 +857,15 @@ input {
 .tm-form-container {
   padding: 50px 0;
 
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s ease;
+
+  &.awaiting-animation {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
   .uk-button {
     width: 300px;
   }
@@ -922,8 +944,12 @@ input {
   .tm-contacts-phones {
     margin-bottom: 40px;
     
-    .tm-phones {
+    .tm-phones a{
       color: #000000;
+
+      &::after {
+        background-color: #000000;
+      }
     }
   }
 }
@@ -1096,3 +1122,17 @@ input {
 .uk-modal {
   z-index: 2050;
 }
+
+.preanimate-on-start {
+  left: 150%;
+  transition: left 2s;
+}
+
+.animate-on-start {
+  //transform: translateX(500%)!important;
+  //opacity: 0!important;
+  //transition: all 1s!important;
+  left: 50%;
+  transition: left 2s;
+}
+
