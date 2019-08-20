@@ -7,8 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=cyrillic-ext"
+          rel="stylesheet">
+
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"/>
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
@@ -21,74 +27,962 @@
         <div>
 
             <!--Header-->
-            <header class="uk-navbar-container uk-position-relative">
-                <nav uk-navbar>
-                    <div class="uk-navbar-left">
+            <header class="uk-position-relative">
+                <nav class="tm-header-top uk-background-secondary">
+                    <div class="uk-container uk-container-large">
+                        <div uk-navbar>
 
-                        <!--mobile menu toggle-->
-                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                           uk-navbar-toggle-icon uk-toggle></a>
+                            <div class="uk-navbar-left">
 
-                        <!--logo-->
-                        <a class="uk-navbar-item uk-logo" href="/">
-                            <img src="images/logo_tourweek.png" alt="">
-                        </a>
+                                <!--navbar menu-->
+                                <ul class="tm-js-menu uk-navbar-nav uk-visible@m">
+                                    <li><a href="#anchorSliderTop">Акция</a></li>
+                                    <li><a href="#anchorAdvantages">Наши преимущества</a></li>
+                                    <li><a href="#anchorGallery">Галерея</a></li>
+                                    <li><a href="#anchorClients">Наши поставщики</a></li>
+                                    <li><a href="#anchorConditions">Только выгодные условия</a></li>
+                                    <li><a href="#anchorAbout">Немного о нас</a></li>
+                                    <li><a href="#anchorBottomForm">Форма заявки</a></li>
+                                </ul>
 
-                        <!--navbar menu-->
-                        <ul class="uk-navbar-nav uk-visible@l">
-                            <li><a href="#"></a></li>
-                            <li>
-                                <a href="#"></a>
+                            </div>
 
-                                <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
-                                    <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
-                                            <li><a href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                            <div class="uk-navbar-right">
+                                <!--mobile menu toggle-->
+                                <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@m"
+                                   uk-navbar-toggle-icon uk-toggle></a>
+                            </div>
 
+                        </div>
                     </div>
 
-                    <div class="uk-navbar-center uk-visible@l"></div>
-
-                    <div class="uk-navbar-right"></div>
                 </nav>
+
+                <nav class="tm-header-bottom">
+                    <div class="uk-container uk-container-large">
+                        <nav uk-navbar>
+
+                            <div class="uk-navbar-left">
+
+                                <!--logo-->
+                                <a class="uk-navbar-item uk-logo" href="/">
+                                    <img class="uk-margin-right" src="images/e-logo.svg" alt="logo" title="Logo">
+                                    <div>
+                                        <div><img src="images/e-moda.svg" alt="e-moda" title="Emoda"></div>
+                                        <div>Европейская мода</div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <!--<div class="uk-navbar-center uk-visible@l"></div>-->
+
+                            <div class="uk-navbar-right">
+                                <div class="tm-margin-xlarge-right-adaptive tm-margin-bottom-adaptive uk-flex uk-flex-middle uk-visible@m">
+                                    <div class="uk-margin-right">
+                                        <img src="images/icon-phone.svg" alt="">
+                                    </div>
+                                    <div class="tm-phones">
+                                        <a class="link-lined uk-display-block" href="tel:+79685390890">+7 (968) 539 08 90</a>
+                                        <a class="link-lined uk-display-block" href="tel:+79685390890">+7 (968) 539 08 90</a>
+                                    </div>
+                                </div>
+                                <div class="tm-margin-xlarge-right-adaptive tm-margin-bottom-adaptive uk-visible@m">
+                                    <div>
+                                        <a class="link-lined" href="mailto:emoda.ru@mail.ru">emoda.ru@mail.ru</a>
+                                    </div>
+                                    <div>
+                                        ПН-ВС 09:00-20:00
+                                    </div>
+                                </div>
+                                <button class="uk-button uk-button-primary uk-visible@s" uk-toggle="target: #modalCall">
+                                    <span class="uk-margin-right">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#404266"/>
+    <path d="M28.4593 22.4889L25.8487 19.8783C25.129 19.1586 23.9578 19.1586 23.2381 19.8783L22.0515 21.0649C21.5062 21.6102 20.6189 21.61 20.0739 21.0651L14.9305 15.9173C14.384 15.3708 14.3839 14.4862 14.9305 13.9396C15.1217 13.7485 15.6705 13.1996 16.1171 12.753C16.8337 12.0364 16.8437 10.8689 16.1164 10.1417L13.5065 7.54001C12.7868 6.82031 11.6157 6.82031 10.8979 7.53813C10.3607 8.07059 10.1875 8.24237 9.94662 8.48112C7.35115 11.0765 7.35115 15.2996 9.9465 17.895L18.096 26.0488C20.6975 28.6503 24.9082 28.6505 27.51 26.0488L28.4593 25.0994C29.179 24.3797 29.179 23.2086 28.4593 22.4889ZM11.7662 8.4102C12.0061 8.1703 12.3964 8.17026 12.637 8.41086L15.247 11.0126C15.4874 11.253 15.4874 11.6422 15.247 11.8828L14.8118 12.3178L11.3333 8.83931L11.7662 8.4102ZM18.9663 25.1787L10.8168 17.0248C8.80876 15.0168 8.69839 11.8637 10.4774 9.72381L13.9458 13.1923C13.0344 14.2254 13.0724 15.7997 14.0601 16.7874L19.2033 21.9349C19.2034 21.935 19.2035 21.935 19.2035 21.9351C20.1901 22.9218 21.7644 22.9622 22.7988 22.0496L26.2673 25.5181C24.1342 27.294 20.9882 27.2006 18.9663 25.1787ZM27.5892 24.2293L27.154 24.6644L23.6732 21.1836L24.1083 20.7485C24.3482 20.5086 24.7386 20.5085 24.9785 20.7485L27.5891 23.3591C27.8291 23.599 27.8291 23.9894 27.5892 24.2293Z"
+          fill="#404266"/>
+</svg>
+                                    </span>
+                                    Заказать звонок
+                                </button>
+                            </div>
+
+                        </nav>
+                    </div>
+
+                </nav>
+
             </header>
 
             <!-- Section -->
-            <div class="uk-section">
-                <div class="uk-container">
+            <div id="anchorSliderTop" class="tm-slider-top-wrap uk-background-primary">
+                <div class="tm-slider-controls">
+                    <div class="tm-button-round tm-button-round-left">
+                        <span class="tm-button-round-face"></span>
+                    </div>
+                    <div class="tm-button-round tm-button-round-right">
+                        <span class="tm-button-round-face"></span>
+                    </div>
+                </div>
+                <div class="tm-slider-top">
+                    <div class="uk-position-relative">
+                        <div class="tm-slider-top-image uk-cover-container">
+                            <img src="images/img-slider-top-1.jpg" alt="" uk-cover>
+                        </div>
+                        <div class="tm-slider-top-text uk-container uk-container-large uk-flex uk-flex-middle">
+                            <div class="uk-width-1-2@m">
+                                <div class="uk-h1">
+                                    Мода и стиль напрямую из Польши
+                                </div>
+                                <p class="uk-margin-large-bottom">
+                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
+                                </p>
+                                <button class="uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <span class="uk-margin-right">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#404266"/>
+    <path d="M28.4593 22.4889L25.8487 19.8783C25.129 19.1586 23.9578 19.1586 23.2381 19.8783L22.0515 21.0649C21.5062 21.6102 20.6189 21.61 20.0739 21.0651L14.9305 15.9173C14.384 15.3708 14.3839 14.4862 14.9305 13.9396C15.1217 13.7485 15.6705 13.1996 16.1171 12.753C16.8337 12.0364 16.8437 10.8689 16.1164 10.1417L13.5065 7.54001C12.7868 6.82031 11.6157 6.82031 10.8979 7.53813C10.3607 8.07059 10.1875 8.24237 9.94662 8.48112C7.35115 11.0765 7.35115 15.2996 9.9465 17.895L18.096 26.0488C20.6975 28.6503 24.9082 28.6505 27.51 26.0488L28.4593 25.0994C29.179 24.3797 29.179 23.2086 28.4593 22.4889ZM11.7662 8.4102C12.0061 8.1703 12.3964 8.17026 12.637 8.41086L15.247 11.0126C15.4874 11.253 15.4874 11.6422 15.247 11.8828L14.8118 12.3178L11.3333 8.83931L11.7662 8.4102ZM18.9663 25.1787L10.8168 17.0248C8.80876 15.0168 8.69839 11.8637 10.4774 9.72381L13.9458 13.1923C13.0344 14.2254 13.0724 15.7997 14.0601 16.7874L19.2033 21.9349C19.2034 21.935 19.2035 21.935 19.2035 21.9351C20.1901 22.9218 21.7644 22.9622 22.7988 22.0496L26.2673 25.5181C24.1342 27.294 20.9882 27.2006 18.9663 25.1787ZM27.5892 24.2293L27.154 24.6644L23.6732 21.1836L24.1083 20.7485C24.3482 20.5086 24.7386 20.5085 24.9785 20.7485L27.5891 23.3591C27.8291 23.599 27.8291 23.9894 27.5892 24.2293Z"
+          fill="#404266"/>
+</svg>
+                                    </span>
+                                    Заказать звонок
+                                </button>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="uk-position-relative">
+                        <div class="tm-slider-top-image uk-cover-container">
+                            <img src="images/img-slider-top-1.jpg" alt="" uk-cover>
+                        </div>
+                        <div class="tm-slider-top-text uk-container uk-container-large uk-flex uk-flex-middle">
+                            <div class="uk-width-1-2@m">
+                                <div class="uk-h1">
+                                    Мода и стиль напрямую из Польши
+                                </div>
+                                <p>
+                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
+                                </p>
+                                <button class="uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <span class="uk-margin-right">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#404266"/>
+    <path d="M28.4593 22.4889L25.8487 19.8783C25.129 19.1586 23.9578 19.1586 23.2381 19.8783L22.0515 21.0649C21.5062 21.6102 20.6189 21.61 20.0739 21.0651L14.9305 15.9173C14.384 15.3708 14.3839 14.4862 14.9305 13.9396C15.1217 13.7485 15.6705 13.1996 16.1171 12.753C16.8337 12.0364 16.8437 10.8689 16.1164 10.1417L13.5065 7.54001C12.7868 6.82031 11.6157 6.82031 10.8979 7.53813C10.3607 8.07059 10.1875 8.24237 9.94662 8.48112C7.35115 11.0765 7.35115 15.2996 9.9465 17.895L18.096 26.0488C20.6975 28.6503 24.9082 28.6505 27.51 26.0488L28.4593 25.0994C29.179 24.3797 29.179 23.2086 28.4593 22.4889ZM11.7662 8.4102C12.0061 8.1703 12.3964 8.17026 12.637 8.41086L15.247 11.0126C15.4874 11.253 15.4874 11.6422 15.247 11.8828L14.8118 12.3178L11.3333 8.83931L11.7662 8.4102ZM18.9663 25.1787L10.8168 17.0248C8.80876 15.0168 8.69839 11.8637 10.4774 9.72381L13.9458 13.1923C13.0344 14.2254 13.0724 15.7997 14.0601 16.7874L19.2033 21.9349C19.2034 21.935 19.2035 21.935 19.2035 21.9351C20.1901 22.9218 21.7644 22.9622 22.7988 22.0496L26.2673 25.5181C24.1342 27.294 20.9882 27.2006 18.9663 25.1787ZM27.5892 24.2293L27.154 24.6644L23.6732 21.1836L24.1083 20.7485C24.3482 20.5086 24.7386 20.5085 24.9785 20.7485L27.5891 23.3591C27.8291 23.599 27.8291 23.9894 27.5892 24.2293Z"
+          fill="#404266"/>
+</svg>
+                                    </span>
+                                    Заказать звонок
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Section -->
+            <div id="anchorAdvantages" class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <h2 class="h2-main">Наши преимущества</h2>
+
+                    <div class="tm-adv-adaptive uk-grid-collapse uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid>
+                        <div class="tm-adv-block tm-angle-left">
+                            <div class="uk-flex uk-flex-middle uk-flex-between">
+                                <div class="uk-flex uk-flex-column uk-flex-between">
+                                    <h2>Более 500</h2>
+                                    <p>Активных позиций</p>
+                                </div>
+                                <div class="tm-adv-icon">
+                                    <img src="images/icon-adv-flag.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="tm-js-menu">
+                                <a class="link-lined" href="#anchorGallery"><span class="uk-margin-right"><img
+                                        src="images/icon-adv-link.svg" alt=""></span>Просмотреть галерею</a>
+                            </div>
+                        </div>
+                        <div class="tm-adv-block uk-background-primary">
+                            <div class="uk-flex uk-flex-middle uk-flex-between">
+                                <div class="uk-flex uk-flex-column uk-flex-between">
+                                    <h2>Более 40</h2>
+                                    <p>Партнеров из Европы</p>
+                                </div>
+                                <div class="tm-adv-icon">
+                                    <img src="images/icon-adv-hands.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="tm-js-menu">
+                                <a class="link-lined" href="#anchorClients"><span class="uk-margin-right"><img
+                                        src="images/icon-adv-link.svg" alt=""></span>Просмотреть список компаний</a>
+                            </div>
+                        </div>
+                        <div class="tm-adv-block tm-angle-right">
+                            <div class="uk-flex uk-flex-middle uk-flex-between">
+                                <div class="uk-flex uk-flex-column uk-flex-between">
+                                    <h2>Более 20</h2>
+                                    <p>Лет на рынке одежды</p>
+                                </div>
+                                <div class="tm-adv-icon">
+                                    <img src="images/icon-adv-ribbon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="tm-js-menu">
+                                <a class="link-lined" href="#anchorAbout"><span class="uk-margin-right"><img
+                                        src="images/icon-adv-link.svg" alt=""></span>Просмотреть галерею</a>
+                            </div>
+                        </div>
+                        <div class="tm-adv-block-long uk-width-2-3@l">
+                            <div class="uk-cover-container awaiting-animation">
+                                <img class="hover-scale" src="images/img-adv-1.jpg" alt="" uk-cover>
+                                <div class="uk-flex uk-flex-middle uk-flex-between tm-z-index">
+                                    <div class="uk-width-1-2@s">
+                                        <h3>Самые низкие оптовые цены. Если Вы найдете ниже — сообщите нам.</h3>
+                                    </div>
+
+                                </div>
+                                <div class="tm-z-index">
+                                    <a class="link-lined" href="#modalCall" uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
+                                            src="images/icon-adv-link-inv.svg" alt=""></span>Просмотреть галерею</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tm-adv-block uk-background-primary">
+                            <div class="uk-flex uk-flex-middle uk-flex-between">
+                                <div>
+                                    <h3>Еженедельное обновление ассортимента</h3>
+                                </div>
+                                <div class="tm-adv-icon">
+                                    <img src="images/icon-adv-sack.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <a class="link-lined" href="#modalCall" uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
+                                        src="images/icon-adv-link.svg" alt=""></span>Просмотреть галерею</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!-- Section -->
+            <div id="anchorGallery" class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-flex uk-flex-middle uk-margin-medium-bottom uk-flex-wrap">
+                        <h2 class="h2-main uk-margin-large-right uk-margin-remove-bottom">Хиты продаж</h2>
+                        <div class="uk-text-muted">Emoda — один из крупнейших оптовых <br/>поставщиков одежды из Польши
+                        </div>
+                    </div>
+
+                    <!--Custom Tabs-->
+                    <div class="tm-tabs-sales">
+                        <div class="tm-tabs-controls">
+                            <div class="tm-tabs-switches">
+                                <a href="#">Платья</a>
+                                <a href="#">Одежда</a>
+                                <a href="#">Одежда</a>
+                            </div>
+                            <div class="tm-slides-swithes">
+                                <div class="tm-button-round tm-button-round-left">
+                                    <span class="tm-button-round-face"></span>
+                                </div>
+                                <div class="tm-button-round tm-button-round-right">
+                                    <span class="tm-button-round-face"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-tabs-wrapper">
+                            <div class="tm-tab">
+                                <div id="tabSlider1" class="tm-tab-slider">
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-text-center">
+                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                        Получить каталог
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tm-tab">
+                                <div id="tabSlider2" class="tm-tab-slider">
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-text-center">
+                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                        Получить каталог
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tm-tab">
+                                <div id="tabSlider3" class="tm-tab-slider">
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-1.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-2.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-tab-slider-img-wrapper">
+                                            <img src="images/img-sales-tab-slider-3.jpg" alt="">
+                                        </div>
+                                        <div class="tm-tab-slider-caption">
+                                            Название товара
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-text-center">
+                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                        Получить каталог
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div id="anchorClients" class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-flex uk-flex-middle uk-margin-medium-bottom uk-flex-wrap">
+                        <h2 class="h2-main uk-margin-large-right uk-margin-remove-bottom">Наши поставщики</h2>
+                        <div class="uk-text-muted">Мы одни из самых крупных поставщиков, <br/>европейской женской одежды в России.
+                        </div>
+                    </div>
+
+                    <div class="uk-grid-small uk-child-width-1-3@s" uk-grid>
+                        <div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                    <span>Название компании</span>
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-badge">
+                                <div class="uk-flex uk-flex-column">
+                                    <span>Название компании</span>
+                                </div>
+                                <div class="tm-clients-logo">
+                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tm-badge-arrow">
+                                        <img src="images/icon-accordion-badge-arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div id="anchorConditions" class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <h2 class="h2-main">Только выгодные условия<br/>для наших клиентов</h2>
+
+                    <div class="tm-conditions uk-child-width-1-2@s uk-child-width-1-4@l" uk-grid>
+                        <div class="awaiting-animation delay-1">
+                            <div class="tm-conditions-item">
+                                <div class="tm-conditions-img-wrapper">
+                                    <img src="images/img-conditions-1.png" alt="">
+                                </div>
+                                <div class="tm-conditions-overlay">
+                                    <div>
+                                        <h3>В одном заказе должно быть не менее 5 единиц товара</h3>
+                                        <p class="tm-hover-visible">Повседневная практика показывает, что сложившаяся
+                                            структура организации
+                                            позволяет оценить значение позиций, занимаемых участниками в отношении
+                                            поставленных задач.</p>
+                                    </div>
+                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                        Заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="awaiting-animation delay-2">
+                            <div class="tm-conditions-item">
+                                <div class="tm-conditions-img-wrapper">
+                                    <img src="images/img-conditions-2.png" alt="">
+                                </div>
+                                <div class="tm-conditions-overlay">
+                                    <div>
+                                        <h3>Оплата наличными картой, безналичный расчет</h3>
+                                        <p class="tm-hover-visible">Повседневная практика показывает, что сложившаяся
+                                            структура организации
+                                            позволяет
+                                            оценить значение позиций, занимаемых участниками в отношении поставленных
+                                            задач.</p>
+                                    </div>
+                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                        Заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="awaiting-animation delay-3">
+                            <div class="tm-conditions-item">
+                                <div class="tm-conditions-img-wrapper">
+                                    <img src="images/img-conditions-3.png" alt="">
+                                </div>
+                                <div class="tm-conditions-overlay">
+                                    <div>
+                                        <h3>Доставка по Москве бесплатно</h3>
+                                        <p class="tm-hover-visible">Повседневная практика показывает, что сложившаяся
+                                            структура организации
+                                            позволяет
+                                            оценить значение позиций, занимаемых участниками в отношении поставленных
+                                            задач.</p>
+                                    </div>
+                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                        Заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="awaiting-animation delay-4">
+                            <div class="tm-conditions-item">
+                                <div class="tm-conditions-img-wrapper">
+                                    <img src="images/img-conditions-4.png" alt="">
+                                </div>
+                                <div class="tm-conditions-overlay">
+                                    <div>
+                                        <h3>Доставка по России любыми транспортными компаниями</h3>
+                                        <p class="tm-hover-visible">Повседневная практика показывает, что сложившаяся
+                                            структура организации
+                                            позволяет
+                                            оценить значение позиций, занимаемых участниками в отношении поставленных
+                                            задач.</p>
+                                    </div>
+                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                        Заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div id="anchorAbout" class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-grid-match" uk-grid>
+                        <div class="uk-width-1-2@m uk-width-2-5@l">
+                            <div class="tm-about-text">
+                                <h2 class="h2-main">Немного о нас</h2>
+                                <p>Не следует, однако забывать, что постоянное информационно-пропагандистское
+                                    обеспечение
+                                    нашей деятельности позволяет выполнять важные задания по разработке систем массового
+                                    участия. Задача организации, в особенности же консультация с широким активом играет
+                                    важную роль в формировании дальнейших направлений развития. Товарищи! дальнейшее
+                                    развитие различных форм деятельности способствует подготовки и реализации
+                                    направлений
+                                    прогрессивного развития. Задача организации, в особенности же рамки и место обучения
+                                    кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций,
+                                    занимаемых участниками в отношении поставленных задач.</p>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2@m uk-width-3-5@l">
+                            <div class="tm-about-slider-wrapper">
+                                <div class="tm-about-slider">
+                                    <div class="tm-about-slider-img-wrapper">
+                                        <img src="images/img-about-slider.jpg" alt="">
+                                    </div>
+                                    <div class="tm-about-slider-img-wrapper">
+                                        <img src="images/img-about-slider.jpg" alt="">
+                                    </div>
+                                    <div class="tm-about-slider-img-wrapper">
+                                        <img src="images/img-about-slider.jpg" alt="">
+                                    </div>
+                                    <div class="tm-about-slider-img-wrapper">
+                                        <img src="images/img-about-slider.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tm-about-slider-controls">
+                                    <div class="tm-button-round tm-button-round-left">
+                                        <span class="tm-button-round-face"></span>
+                                    </div>
+                                    <div class="tm-button-round tm-button-round-right">
+                                        <span class="tm-button-round-face"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div id="anchorBottomForm" class="uk-section tm-background-primary-gradient">
+                <div class="uk-container uk-container-large uk-text-center">
+                    <div class="tm-form-container">
+                        <h2>Остались вопросы? Мы вам ответим</h2>
+                        <form id="bottomForm" action="">
+                            <div class="tm-form-adaptive uk-flex uk-flex-center uk-flex-middle uk-margin-medium-bottom">
+                                <div class="tm-bottom-form-input tm-bottom-form-phone">
+                                    <input type="tel" name="bphone" title="+79xxxxxxxxx или 8xxxxxxxxxx" pattern="\+79[0-9]{9}|8[0-9]{10}" minlength="7" maxlength="18" placeholder="Ваш номер телефона" required>
+                                </div>
+                                <div class="tm-bottom-form-input tm-bottom-form-name">
+                                    <input type="text" name="bname" minlength="2" placeholder="Ваше имя" required>
+                                </div>
+
+                                <button class="uk-button uk-button-default">
+                                    Отправить заявку
+                                </button>
+                            </div>
+                            <div class="uk-flex uk-flex-center">
+                                <label class="uk-flex uk-flex-middle uk-text-left">
+                                    <div>
+                                        <input class="uk-radio uk-margin-right" type="radio" name="radio1" required>
+                                    </div>
+                                    <span>Соглашаюсь с Условиями использования сервиса и <br/>Политикой конфиденциальности</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="uk-section uk-background-primary uk-position-relative">
+                <div class="uk-overflow-hidden">
+                    <div class="uk-position-relative">
+                        <div class="tm-contacts-text uk-container uk-container-large uk-flex uk-flex-middle">
+                            <div>
+                                <h2>Контакты</h2>
+                                <div class="tm-contacts-address">г. Москва, ул. Уличная, д. 16</div>
+                                <div class="tm-contacts-phones uk-flex uk-flex-middle">
+                                    <div class="uk-margin-right">
+                                        <img src="images/icon-phone.svg" alt="">
+                                    </div>
+                                    <div class="tm-phones">
+                                        <div>+7 (968) 539 08 90</div>
+                                    </div>
+                                </div>
+                                <div class="tm-contacts-address">г. Москва, ул. Уличная, д. 16</div>
+                                <div class="tm-contacts-phones uk-flex uk-flex-middle">
+                                    <div class="uk-margin-right">
+                                        <img src="images/icon-phone.svg" alt="">
+                                    </div>
+                                    <div class="tm-phones">
+                                        <div>+7 (968) 539 08 90</div>
+                                    </div>
+                                </div>
+                                <div class="tm-contacts-address">г. Москва, ул. Уличная, д. 16</div>
+                                <div class="tm-contacts-phones uk-flex uk-flex-middle">
+                                    <div class="uk-margin-right">
+                                        <img src="images/icon-phone.svg" alt="">
+                                    </div>
+                                    <div class="tm-phones">
+                                        <div>+7 (968) 539 08 90</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-contacts-map uk-cover-container">
+                            <div id="map">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container uk-container-large uk-flex uk-flex-center">
+                    <div class="uk-flex uk-flex-middle">
+                        <img class="uk-margin-right" src="images/icon-bottom-logo.svg" alt="">
+                        <span>Разработка сайта: W2B-Group</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Footer-->
-        <footer class="uk-section">
-            <div class="uk-container">
-
+        <footer class="uk-section-small uk-background-primary">
+            <div class="tm-footer uk-text-center">
+                <button class="tm-news-button uk-hidden uk-button uk-button-default">
+                    Показать новости
+                </button>
             </div>
+            <div class="tm-news">
+                <div class="uk-position-relative">
+                    <marquee  direction="left" behavior="scroll" loop="-1">
+
+		   		<span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+                        <span class="tm-news-string">
+					18.12.19 Состоится выставка на ВДНХ
+					&nbsp;
+	      			&nbsp;
+	      			∗
+	      			&nbsp;
+	      			&nbsp;
+			    </span>
+
+                    </marquee>
+                    <a class="tm-button-close" href="#">
+                        <img src="images/icon-close.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
         </footer>
     </div>
 
     <!-- Off-canvas -->
-    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
-        <div class="uk-offcanvas-bar">
+    <div id="offcanvas-overlay" uk-offcanvas="overlay: true; flip: true">
+        <div class="uk-position-relative">
             <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <div class="uk-card uk-flex uk-flex-center">
-                <ul class="uk-nav">
-                    <li><a href="#"></a></li>
-                </ul>
+        </div>
+        <div class="uk-offcanvas-bar">
+            <div class="uk-overflow-auto">
+                <div class="uk-card uk-margin-bottom">
+                    <ul class="tm-js-menu uk-nav">
+                        <li><a href="#anchorSliderTop">Акция</a></li>
+                        <li><a href="#anchorAdvantages">Наши преимущества</a></li>
+                        <li><a href="#anchorGallery">Галерея</a></li>
+                        <li><a href="#anchorClients">Наши поставщики</a></li>
+                        <li><a href="#anchorConditions">Только выгодные условия</a></li>
+                        <li><a href="#anchorAbout">Немного о нас</a></li>
+                        <li><a href="#anchorBottomForm">Форма заявки</a></li>
+                    </ul>
+                </div>
+                <div class="uk-card uk-margin-bottom">
+                    <div class="uk-flex uk-flex-middle">
+                        <div class="uk-margin-small-right">
+                            <img src="images/icon-phone.svg" alt="">
+                        </div>
+                        <div class="tm-phones">
+                            <div>+7 (968) 539 08 90</div>
+                            <div>+7 (968) 539 08 90</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-card uk-margin-bottom">
+                    <div>
+                        <div>
+                            <a class="link-lined" href="mailto:emoda.ru@mail.ru">emoda.ru@mail.ru</a>
+                        </div>
+                        <div class="tm-text-emphasis">
+                            ПН-ВС 09:00-20:00
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
+</div>
+
+<div id="modalCall" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <div class="tm-icon-modal-mail">
+            <img src="images/icon-modal-mail.svg" alt="">
+        </div>
+        <div class="tm-modal-form">
+            <h2>Заказать звонок</h2>
+            <form id="modalForm" action="">
+                <div class="uk-margin-medium-bottom">
+
+                        <input class="tm-modal-form-input" type="text" name="mname" minlength="2" placeholder="Имя" required>
+
+
+                        <input class="tm-modal-form-input" type="tel" name="mphone" title="+79xxxxxxxxx или 8xxxxxxxxxx" pattern="\+79[0-9]{9}|8[0-9]{10}" minlength="7" maxlength="18" placeholder="Телефон" required>
+
+                    <button class="tm-modal-form-button uk-button uk-button-default" type="submit">
+                        Отправить
+                    </button>
+                </div>
+                <div class="uk-flex uk-flex-center uk-margin-bottom">
+                    <label class="uk-flex uk-text-left">
+                        <div>
+                            <input class="uk-radio uk-margin-right" type="radio" name="radio2" required>
+                        </div>
+                        <span><a href="#" target="_blank">Отправляя свои данные нам, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных</a></span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 </body>
