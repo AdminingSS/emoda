@@ -617,6 +617,8 @@ input {
   background-color: @global-primary-background;
   font-size: 20px;
   color: #767676;
+  max-height: 74px;
+  box-sizing: border-box;
 
   display: flex;
   flex-wrap: wrap;
@@ -627,7 +629,12 @@ input {
 
   cursor: pointer;
 
-  transition: height 1s;
+  transition: max-height 1s;
+
+  &:hover, &.focus {
+    max-height: 100%;
+    transition: max-height 1s;
+  }
 
   //&:hover, &:focus {
   //
@@ -1123,16 +1130,19 @@ input {
   z-index: 2050;
 }
 
-.preanimate-on-start {
-  left: 150%;
-  transition: left 2s;
-}
+.tm-slider-top-image img {
+  //transform: translate(250%, -50%);
+  //left: 250%;
+  //opacity: 0;
+  left: 250%;
+  opacity: 0;
+  transition: left 2s, opacity 2s;
 
-.animate-on-start {
-  //transform: translateX(500%)!important;
-  //opacity: 0!important;
-  //transition: all 1s!important;
-  left: 50%;
-  transition: left 2s;
+  &.tm-active {
+    //transform: translate(-50%, -50%);
+    left: 50%!important;
+    opacity: 1;
+    transition: left 2s, opacity 2s;
+  }
 }
 

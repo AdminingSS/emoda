@@ -40,12 +40,54 @@
     margin-right: 60px;
   }
 
-  .tm-header-top .uk-navbar-nav>li>a {
+  .tm-header-top .uk-navbar-nav > li > a {
     padding: 0 10px;
   }
 }
 
+@media (max-width: 1439px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  h1, .uk-h1 {
+    margin: 0 0 30px 0;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .tm-slider-top-text p {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .tm-adv-block h3, .tm-adv-block-long h3 {
+    font-size: 22px;
+  }
+
+  h2, .uk-h2 {
+    font-size: 34px;
+  }
+
+  .tm-adv-block h2 {
+    font-size: 30px;
+  }
+
+  .tm-conditions .tm-conditions-overlay h3, .tm-conditions .tm-conditions-overlay .uk-h3 {
+    font-size: 22px;
+  }
+
+  .tm-about-slider {
+    height: 650px;
+  }
+}
+
 @media (max-width: 1199px) {
+
+  .tm-about-slider {
+    height: 580px;
+  }
 
   .tm-header-top .uk-navbar-nav > li > a {
     font-size: 14px;
@@ -57,21 +99,6 @@
 
   .tm-header-bottom .uk-navbar-right {
     justify-content: center;
-  }
-
-  h1, .uk-h1 {
-    margin: 0 0 30px 0;
-    font-size: 50px;
-    line-height: 60px;
-  }
-
-  .tm-slider-top-text p {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .tm-adv-block h3 {
-    font-size: 24px;
   }
 
   .tm-adv-block-long {
@@ -111,10 +138,6 @@
     padding: 40px 0;
   }
 
-  .tm-about-slider {
-    height: 650px;
-  }
-
   .tm-contacts-text > * {
     width: calc(50% - 120px);
   }
@@ -132,9 +155,15 @@
   }
 }
 
+@media (max-width: 1199px) and (min-width: 960px) {
+  .tm-conditions .tm-conditions-item {
+    margin: 0 30px;
+  }
+}
+
 @media (max-width: 959px) {
   .tm-slider-controls {
-    display: none!important;
+    display: none !important;
   }
 
   .tm-slider-top-image {
@@ -164,11 +193,16 @@
   }
 
   .h2-main {
-    margin-bottom: 10px!important;
+    margin-bottom: 10px !important;
   }
 
   .tm-tab .slick-slide .tm-tab-slider-img-wrapper {
-    height: 400px;
+    height: 310px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .tm-accordion-badge {
@@ -207,6 +241,22 @@
 
   .uk-modal-close-outside {
     right: -12px;
+  }
+
+  .tm-accordion-badge {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .tm-conditions {
+    .tm-conditions-img-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .tm-accordion-badge {
+    font-size: 16px;
   }
 }
 
@@ -248,7 +298,7 @@
 
   .h2-main {
     padding-left: 12px;
-    margin-right: 0!important;
+    margin-right: 0 !important;
   }
 
   .tm-adv-block h2 {
@@ -329,6 +379,29 @@
   }
 
   .uk-modal-dialog {
-    max-width: 260px!important;
+    max-width: 260px !important;
+  }
+
+  .tm-about-slider {
+    height: 240px;
+  }
+
+  .tm-conditions .tm-conditions-overlay button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tm-conditions .tm-conditions-item {
+    max-width: 360px;
+
+    &:hover {
+      transform: scale(1.1);
+
+      .tm-conditions-img-wrapper img {
+        transform: scale(1.1);
+
+      }
+
+    }
   }
 }

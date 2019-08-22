@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -30,7 +30,7 @@
             <header class="uk-position-relative">
                 <nav class="tm-header-top uk-background-secondary">
                     <div class="uk-container uk-container-large">
-                        <div uk-navbar>
+                        <div data-uk-navbar>
 
                             <div class="uk-navbar-left">
 
@@ -50,7 +50,7 @@
                             <div class="uk-navbar-right">
                                 <!--mobile menu toggle-->
                                 <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@m"
-                                   uk-navbar-toggle-icon uk-toggle></a>
+                                   data-uk-navbar-toggle-icon data-uk-toggle></a>
                             </div>
 
                         </div>
@@ -60,7 +60,7 @@
 
                 <nav class="tm-header-bottom">
                     <div class="uk-container uk-container-large">
-                        <nav uk-navbar>
+                        <nav data-uk-navbar>
 
                             <div class="uk-navbar-left">
 
@@ -95,7 +95,7 @@
                                         ПН-ВС 09:00-20:00
                                     </div>
                                 </div>
-                                <button class="uk-button uk-button-primary uk-visible@s" uk-toggle="target: #modalCall">
+                                <button class="uk-button uk-button-primary uk-visible@s" data-uk-toggle="target: #modalCall">
                                     <span class="uk-margin-right">
                                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -128,17 +128,22 @@
                 <div class="tm-slider-top">
                     <div class="uk-position-relative">
                         <div class="tm-slider-top-image uk-cover-container">
-                            <img class="preanimate-on-start" src="images/img-slider-top-1.jpg" alt="" uk-cover>
+                            <img class="uk-hidden" src="images/img-slider-top-1.jpg" alt="" data-uk-cover>
+                            <img class="uk-hidden" src="images/img-slider-top-1.jpg" alt="" data-uk-cover>
                         </div>
-                        <div class="tm-slider-top-text uk-container uk-container-large uk-flex uk-flex-middle">
-                            <div class="uk-width-1-2@m">
-                                <div class="uk-h1">
-                                    Мода и стиль напрямую из Польши
-                                </div>
-                                <p class="uk-margin-large-bottom">
-                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
-                                </p>
-                                <button class="uk-button uk-button-default" uk-toggle="target: #modalCall">
+                        <div class="">
+                            <div class=" uk-container uk-container-large uk-flex uk-flex-middle">
+                                <div class="uk-width-1-2@m tm-slider-top-body">
+                                    <div>
+                                        <div class="tm-slider-top-text uk-flex uk-flex-middle uk-height-1-1">
+                                            <div>
+                                                <div class="uk-h1">
+                                                    Мода и стиль напрямую из Польши
+                                                </div>
+                                                <p class="uk-margin-large-bottom">
+                                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
+                                                </p>
+                                                <button class="uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                     <span class="uk-margin-right">
                                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -147,24 +152,21 @@
           fill="#404266"/>
 </svg>
                                     </span>
-                                    Заказать звонок
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-position-relative">
-                        <div class="tm-slider-top-image uk-cover-container">
-                            <img src="images/img-slider-top-1.jpg" alt="" uk-cover>
-                        </div>
-                        <div class="tm-slider-top-text uk-container uk-container-large uk-flex uk-flex-middle">
-                            <div class="uk-width-1-2@m">
-                                <div class="uk-h1">
-                                    Мода и стиль напрямую из Польши
-                                </div>
-                                <p>
-                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
-                                </p>
-                                <button class="uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                                    Заказать звонок
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tm-slider-top-text uk-flex uk-flex-middle uk-height-1-1">
+                                            <div>
+                                                <div class="uk-h1">
+                                                    Мода и стиль напрямую из Польши
+                                                </div>
+                                                <p class="uk-margin-large-bottom">
+                                                    <span>Emoda</span> - один из крупнейших оптовых поставщиков одежды из Польши
+                                                </p>
+                                                <button class="uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                     <span class="uk-margin-right">
                                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -173,8 +175,12 @@
           fill="#404266"/>
 </svg>
                                     </span>
-                                    Заказать звонок
-                                </button>
+                                                    Заказать звонок
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -188,7 +194,7 @@
                 <div class="uk-container uk-container-large">
                     <h2 class="h2-main">Наши преимущества</h2>
 
-                    <div class="tm-adv-adaptive uk-grid-collapse uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid>
+                    <div class="tm-adv-adaptive uk-grid-collapse uk-child-width-1-2@m uk-child-width-1-3@l" data-uk-grid>
                         <div class="tm-adv-block tm-angle-left">
                             <div class="uk-flex uk-flex-middle uk-flex-between">
                                 <div class="uk-flex uk-flex-column uk-flex-between">
@@ -236,7 +242,7 @@
                         </div>
                         <div class="tm-adv-block-long uk-width-2-3@l">
                             <div class="uk-cover-container awaiting-animation">
-                                <img class="hover-scale" src="images/img-adv-1.jpg" alt="" uk-cover>
+                                <img class="hover-scale" src="images/img-adv-1.jpg" alt="" data-uk-cover>
                                 <div class="uk-flex uk-flex-middle uk-flex-between tm-z-index">
                                     <div class="uk-width-1-2@s">
                                         <h3>Самые низкие оптовые цены. Если Вы найдете ниже — сообщите нам.</h3>
@@ -244,7 +250,7 @@
 
                                 </div>
                                 <div class="tm-z-index">
-                                    <a class="link-lined" href="#modalCall" uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
+                                    <a class="link-lined" href="#modalCall" data-uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
                                             src="images/icon-adv-link-inv.svg" alt=""></span>Просмотреть галерею</a>
                                 </div>
                             </div>
@@ -260,7 +266,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="link-lined" href="#modalCall" uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
+                                <a class="link-lined" href="#modalCall" data-uk-toggle="target: #modalCall"><span class="uk-margin-right"><img
                                         src="images/icon-adv-link.svg" alt=""></span>Просмотреть галерею</a>
                             </div>
                         </div>
@@ -347,7 +353,7 @@
                                     </div>
                                 </div>
                                 <div class="uk-text-center">
-                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                    <button class="uk-button uk-button-primary" data-uk-toggle="target: #modalCall">
                                         Получить каталог
                                     </button>
                                 </div>
@@ -404,7 +410,7 @@
                                     </div>
                                 </div>
                                 <div class="uk-text-center">
-                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                    <button class="uk-button uk-button-primary" data-uk-toggle="target: #modalCall">
                                         Получить каталог
                                     </button>
                                 </div>
@@ -461,7 +467,7 @@
                                     </div>
                                 </div>
                                 <div class="uk-text-center">
-                                    <button class="uk-button uk-button-primary" uk-toggle="target: #modalCall">
+                                    <button class="uk-button uk-button-primary" data-uk-toggle="target: #modalCall">
                                         Получить каталог
                                     </button>
                                 </div>
@@ -480,7 +486,7 @@
                         </div>
                     </div>
 
-                    <div class="uk-grid-small uk-child-width-1-3@s" uk-grid>
+                    <div class="uk-grid-small uk-child-width-1-3@s" data-uk-grid>
                         <div>
                             <div class="tm-accordion-badge">
                                 <div class="uk-flex uk-flex-column">
@@ -502,8 +508,6 @@
                                     <span>Название компании</span>
                                 </div>
                                 <div class="tm-clients-logo">
-                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
-                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
                                     <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
                                 </div>
                                 <div>
@@ -547,7 +551,6 @@
                                     <span>Название компании</span>
                                 </div>
                                 <div class="tm-clients-logo">
-                                    <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
                                     <img class="uk-hidden" src="images/img-client-logo.svg" alt="">
                                 </div>
                                 <div>
@@ -603,11 +606,11 @@
             </div>
 
             <!-- Section -->
-            <div id="anchorConditions" class="uk-section">
+            <div id="anchorConditions" class="uk-section uk-overflow-hidden">
                 <div class="uk-container uk-container-large">
                     <h2 class="h2-main">Только выгодные условия<br/>для наших клиентов</h2>
 
-                    <div class="tm-conditions uk-child-width-1-2@s uk-child-width-1-4@l" uk-grid>
+                    <div class="tm-conditions uk-child-width-1-2@s uk-child-width-1-4@l" data-uk-grid>
                         <div class="awaiting-animation delay-1">
                             <div class="tm-conditions-item">
                                 <div class="tm-conditions-img-wrapper">
@@ -621,7 +624,7 @@
                                             позволяет оценить значение позиций, занимаемых участниками в отношении
                                             поставленных задач.</p>
                                     </div>
-                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <button class="tm-hover-visible uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                         Заказать звонок
                                     </button>
                                 </div>
@@ -641,7 +644,7 @@
                                             оценить значение позиций, занимаемых участниками в отношении поставленных
                                             задач.</p>
                                     </div>
-                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <button class="tm-hover-visible uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                         Заказать звонок
                                     </button>
                                 </div>
@@ -661,7 +664,7 @@
                                             оценить значение позиций, занимаемых участниками в отношении поставленных
                                             задач.</p>
                                     </div>
-                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <button class="tm-hover-visible uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                         Заказать звонок
                                     </button>
                                 </div>
@@ -681,7 +684,7 @@
                                             оценить значение позиций, занимаемых участниками в отношении поставленных
                                             задач.</p>
                                     </div>
-                                    <button class="tm-hover-visible uk-button uk-button-default" uk-toggle="target: #modalCall">
+                                    <button class="tm-hover-visible uk-button uk-button-default" data-uk-toggle="target: #modalCall">
                                         Заказать звонок
                                     </button>
                                 </div>
@@ -694,7 +697,7 @@
             <!-- Section -->
             <div id="anchorAbout" class="uk-section">
                 <div class="uk-container uk-container-large">
-                    <div class="uk-grid-match" uk-grid>
+                    <div class="uk-grid-match" data-uk-grid>
                         <div class="uk-width-1-2@m uk-width-2-5@l">
                             <div class="tm-about-text awaiting-animation">
                                 <h2 class="h2-main">Немного о нас</h2>
@@ -745,7 +748,7 @@
                 <div class="uk-container uk-container-large uk-text-center">
                     <div class="tm-form-container awaiting-animation">
                         <h2>Остались вопросы? Мы вам ответим</h2>
-                        <form id="bottomForm" action="">
+                        <form id="bottomForm" action="#">
                             <div class="tm-form-adaptive uk-flex uk-flex-center uk-flex-middle uk-margin-medium-bottom">
                                 <div class="tm-bottom-form-input tm-bottom-form-phone">
                                     <input type="tel" name="bphone" title="+79xxxxxxxxx или 8xxxxxxxxxx" pattern="\+79[0-9]{9}|8[0-9]{10}" minlength="7" maxlength="18" placeholder="Ваш номер телефона" required>
@@ -760,9 +763,9 @@
                             </div>
                             <div class="uk-flex uk-flex-center">
                                 <label class="uk-flex uk-flex-middle uk-text-left">
-                                    <div>
+                                    <span>
                                         <input class="uk-radio uk-margin-right" type="radio" name="radio1" required>
-                                    </div>
+                                    </span>
                                     <span>Соглашаюсь с Условиями использования сервиса и <br/>Политикой конфиденциальности</span>
                                 </label>
                             </div>
@@ -821,7 +824,7 @@
                 <div class="uk-container uk-container-large uk-flex uk-flex-center">
                     <div class="uk-flex uk-flex-middle">
                         <img class="uk-margin-right" src="images/icon-bottom-logo.svg" alt="">
-                        <a class="uk-link-reset" href=”http://w2b-group.ru/" target=”_blank”>Создание сайта W2B-Group</a>
+                        <a class="uk-link-reset" href="http://w2b-group.ru/" target="_blank">Создание сайта W2B-Group</a>
                     </div>
                 </div>
             </div>
@@ -906,9 +909,9 @@
     </div>
 
     <!-- Off-canvas -->
-    <div id="offcanvas-overlay" uk-offcanvas="overlay: true; flip: true">
+    <div id="offcanvas-overlay" data-uk-offcanvas="overlay: true; flip: true">
         <div class="uk-position-relative">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <button class="uk-offcanvas-close" type="button" data-uk-close></button>
         </div>
         <div class="uk-offcanvas-bar">
             <div class="uk-overflow-auto">
@@ -951,15 +954,15 @@
 
 </div>
 
-<div id="modalCall" uk-modal>
+<div id="modalCall" data-uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
-        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <button class="uk-modal-close-outside" type="button" data-uk-close></button>
         <div class="tm-icon-modal-mail">
             <img src="images/icon-modal-mail.svg" alt="">
         </div>
         <div class="tm-modal-form">
             <h2>Заказать звонок</h2>
-            <form id="modalForm" action="">
+            <form id="modalForm" action="#">
                 <div class="uk-margin-medium-bottom">
 
                         <input class="tm-modal-form-input" type="text" name="mname" minlength="2" placeholder="Имя" required>
@@ -973,9 +976,9 @@
                 </div>
                 <div class="uk-flex uk-flex-center uk-margin-bottom">
                     <label class="uk-flex uk-text-left">
-                        <div>
+                        <span>
                             <input class="uk-radio uk-margin-right" type="radio" name="radio2" required>
-                        </div>
+                        </span>
                         <span><a href="#" target="_blank">Отправляя свои данные нам, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных</a></span>
                     </label>
                 </div>

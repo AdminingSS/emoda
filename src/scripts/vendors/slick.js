@@ -8,9 +8,10 @@ $(() => {
 
         const $tabsWrapper = $('.tm-tabs-wrapper');
 
-        const $sliderTop = $('.tm-slider-top');
+        const $sliderTop = $('.tm-slider-top-body');
         const $prevArrowTop = $('.tm-slider-top-wrap .tm-button-round-left');
         const $nextArrowTop = $('.tm-slider-top-wrap .tm-button-round-right');
+        const $sliderTopImages = $('.tm-slider-top-image img');
 
         const $sliderSales = $tabsWrapper.find('.tm-tab-slider');
         const $prevArrowSales = $('.tm-tabs-sales .tm-button-round-left');
@@ -27,7 +28,7 @@ $(() => {
             autoplaySpeed: 5000,
             pauseOnHover: true,
             pauseOnFocus: true,
-            speed: 2800
+            speed: 800
         };
         const sliderSalesOptions = {
             slidesToShow: 3,
@@ -59,41 +60,75 @@ $(() => {
         //     nextArrow: '.tm-about-slider-controls .tm-button-round-right'
         // };
 
-        $sliderTop.on('init', function () {
-            const $image = $sliderTop.find('.slick-current img');
-
-            //$image.css('width',0);
-            // $image.css('left','150%');
-            // $image.animate({
-            //     //width: '100%',
-            //     left: '50%'
-            // }, 2000);
-
-            // $image.animate({  textIndent: 0 /* или любое другое не очень-то нужное здесь свойство */ }, {
-            //     step: function(now, fx) {
-            //         $(this).css('transform','translateX(' + now + '%)');
-            //     },
-            //     duration: 'slow'
-            // }, 'linear');
-
-            // console.log($image);
-            // $image.removeClass('slick-active').delay(1000).addClass('slick-active');
-            //
-            // //$image.addClass('no-transition');
-            $image.addClass('animate-on-start');
-            // setTimeout(function () {
-            //     $image.addClass('animate-on-start');
-            // }, 800);
-
-
-            // $image.removeClass('no-transition');
-            // $image.addClass('reanimate-on-start');
-            // $image.animate({
-            //     opacity: 1
-            // }, 5000, function() {
-            //     // Animation complete.
-            // });
+        $sliderTop.on('init', loadFirstImage);
+        $sliderTop.on('beforeChange', function (event,slick,currentSlide) {
+            removeImage(currentSlide);
         });
+        $sliderTop.on('afterChange', function (event,slick,currentSlide) {
+            loadImage(currentSlide);
+        });
+
+        function loadFirstImage() {
+            const $image = $($sliderTopImages[0]);
+
+            $sliderTopImages.each(function () {
+                $(this).css({
+                    left: '250%'
+                }).removeClass('uk-hidden');
+            });
+
+            // $image.css({
+            //     left: '250%',
+            //     // opacity: 0,
+            //     // transition: 'left 2s, opacity 2s'
+            // });
+            // $image.removeClass('uk-hidden');
+            $image.addClass('tm-active');
+        }
+
+        function removeImage (num) {
+            $($sliderTopImages[num]).removeClass('tm-active');
+        }
+
+        function loadImage (num) {
+            $($sliderTopImages[num]).addClass('tm-active');
+        }
+
+        // $sliderTop.on('init', function () {
+        //     //const $image = $sliderTop.find('.slick-current img');
+        //
+        //     //$image.css('width',0);
+        //     // $image.css('left','150%');
+        //     // $image.animate({
+        //     //     //width: '100%',
+        //     //     left: '50%'
+        //     // }, 2000);
+        //
+        //     // $image.animate({  textIndent: 0 /* или любое другое не очень-то нужное здесь свойство */ }, {
+        //     //     step: function(now, fx) {
+        //     //         $(this).css('transform','translateX(' + now + '%)');
+        //     //     },
+        //     //     duration: 'slow'
+        //     // }, 'linear');
+        //
+        //     // console.log($image);
+        //     // $image.removeClass('slick-active').delay(1000).addClass('slick-active');
+        //     //
+        //     // //$image.addClass('no-transition');
+        //     //$image.addClass('animate-on-start');
+        //     // setTimeout(function () {
+        //     //     $image.addClass('animate-on-start');
+        //     // }, 800);
+        //
+        //
+        //     // $image.removeClass('no-transition');
+        //     // $image.addClass('reanimate-on-start');
+        //     // $image.animate({
+        //     //     opacity: 1
+        //     // }, 5000, function() {
+        //     //     // Animation complete.
+        //     // });
+        // });
 
         // $sliderTop.on('beforeChange', function () {
         //

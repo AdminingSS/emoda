@@ -83,6 +83,17 @@ $(()=>{
             }
         );
 
+        $clientContainers.click(function () {
+            if($currentLogo.length) $currentLogo.addClass( "uk-hidden" );
+            if($currentBadge.length) $currentBadge.removeClass('tm-open');
+            $currentLogo = $(this).find('.tm-clients-logo img');
+            $currentBadge = $(this).find('.tm-badge-arrow');
+            $currentLogo.removeClass("uk-hidden");
+            $currentBadge.addClass('tm-open');
+        });
+
+
+
         // $clientContainers.each(function () {
         //     const $clientContainer = $(this);
         //     const $triggers = $clientContainer.find('span');
