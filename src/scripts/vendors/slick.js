@@ -11,7 +11,13 @@ $(() => {
         const $sliderTop = $('.tm-slider-top-body');
         const $prevArrowTop = $('.tm-slider-top-wrap .tm-button-round-left');
         const $nextArrowTop = $('.tm-slider-top-wrap .tm-button-round-right');
-        const $sliderTopImages = $('.tm-slider-top-image img');
+        const $sliderTopImages = $('.tm-slider-top-image div');
+        // $sliderTopImages.each(function () {
+        //     $(this).css({
+        //         left: '250%'
+        //     }).removeClass('uk-hidden');
+        // });
+        const $image = $($sliderTopImages[0]);
 
         const $sliderSales = $tabsWrapper.find('.tm-tab-slider');
         const $prevArrowSales = $('.tm-tabs-sales .tm-button-round-left');
@@ -69,13 +75,7 @@ $(() => {
         });
 
         function loadFirstImage() {
-            const $image = $($sliderTopImages[0]);
 
-            $sliderTopImages.each(function () {
-                $(this).css({
-                    left: '250%'
-                }).removeClass('uk-hidden');
-            });
 
             // $image.css({
             //     left: '250%',
@@ -83,7 +83,11 @@ $(() => {
             //     // transition: 'left 2s, opacity 2s'
             // });
             // $image.removeClass('uk-hidden');
-            $image.addClass('tm-active');
+
+            setTimeout(function () {
+                $image.addClass('tm-active');
+            },10);
+
         }
 
         function removeImage (num) {

@@ -121,5 +121,13 @@ $(()=>{
         // });
 
     })();
+
+    (()=>{
+        const $phoneHolder = $('.tm-bottom-form-phone input');
+
+        $phoneHolder.on('focus', function () {
+            if($(this).val() == '') $(this).val('+7');
+        });
+    })();
 });
 

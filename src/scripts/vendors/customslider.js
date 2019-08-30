@@ -10,16 +10,36 @@ $(()=>{
         let currentSlideNumber = 0;
         let lastAction = '';
         let animationInProgress = false;
+        let autoplayPaused = false;
         //let prevSlideNumber = slidesCount - 1;
         $($sliderAboutSlides[slidesCount - 1]).addClass('prev-slide');
         $($sliderAboutSlides[currentSlideNumber]).addClass('current-slide');
         $($sliderAboutSlides[currentSlideNumber + 1]).addClass('next-slide');
 
-        //let sliderAutoplay = setTimeout(nextSlide, 5000);
+        let sliderAutoplay = setTimeout(nextSlide, 3000);
 
+        $sliderAboutPrevArrow.on('click', manualPrevSlide);
+        $sliderAboutNextArrow.on('click', manualNextSlide);
 
-        $sliderAboutPrevArrow.on('click', prevSlide);
-        $sliderAboutNextArrow.on('click', nextSlide);
+        function manualNextSlide() {
+            pauseAutoplay();
+            nextSlide();
+        }
+
+        function manualPrevSlide() {
+            pauseAutoplay();
+            prevSlide();
+        }
+
+        function pauseAutoplay() {
+            autoplayPaused = true;
+            clearTimeout(sliderAutoplay);
+            setTimeout(function () {
+                autoplayPaused = false;
+                clearTimeout(sliderAutoplay);
+                sliderAutoplay = setTimeout(nextSlide, 3000);
+            }, 10000);
+        }
 
         function prevSlide() {
             if(animationInProgress) return;
@@ -38,6 +58,11 @@ $(()=>{
                 currentSlideNumber = prevSlideNumber;
                 animationInProgress = false;
             }, 700);
+
+            if(!autoplayPaused) {
+                clearTimeout(sliderAutoplay);
+                sliderAutoplay = setTimeout(nextSlide, 3000);
+            }
         }
 
         function nextSlide() {
@@ -57,6 +82,11 @@ $(()=>{
                 currentSlideNumber = nextSlideNumber;
                 animationInProgress = false;
             }, 700);
+
+            if(!autoplayPaused) {
+                clearTimeout(sliderAutoplay);
+                sliderAutoplay = setTimeout(nextSlide, 3000);
+            }
         }
     })();
 });
