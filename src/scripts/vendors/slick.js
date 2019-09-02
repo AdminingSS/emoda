@@ -81,19 +81,37 @@ $(() => {
         function loadFirstImage() {
 
             setTimeout(function () {
-                $image.addClass('tm-active');
+                //$image.addClass('tm-active');
+                $image.animate({
+                    opacity: 1,
+                    left: "0"
+                }, 2000, function() {
+                    // Animation complete.
+                });
             },500);
 
         }
 
         function removeImage (num) {
             //$($sliderTopImages[num]).removeClass('tm-active');
-            $sliderTopImage[num].removeClass('tm-active');
+            //$sliderTopImage[num].removeClass('tm-active');
+            $sliderTopImage[num].animate({
+                opacity: 0,
+                left: "250%"
+            }, 2000, function() {
+                // Animation complete.
+            });
         }
 
         function loadImage (num) {
             //$($sliderTopImages[num]).addClass('tm-active');
-            $sliderTopImage[num].addClass('tm-active');
+            //$sliderTopImage[num].addClass('tm-active');
+            $sliderTopImage[num].animate({
+                opacity: 1,
+                left: "0"
+            }, 2000, function() {
+                // Animation complete.
+            });
         }
 
         function sliderPause() {
